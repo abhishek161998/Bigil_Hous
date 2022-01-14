@@ -1,0 +1,18 @@
+
+<?php
+include"../database/db_con.php";
+
+
+$id = $_GET['id'];
+
+$query = "DELETE FROM customer_login WHERE id='$id'";
+$ex = mysqli_query($conn,$query);
+if($ex){
+	header("location:customer_login_details.php");
+}
+else{
+	echo "error";
+}
+
+?>
+
